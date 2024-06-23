@@ -39,3 +39,9 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.text
+
+class User(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField()
+    password = models.CharField(max_length=255)
