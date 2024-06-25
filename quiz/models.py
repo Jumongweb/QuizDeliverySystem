@@ -11,7 +11,8 @@ class User(models.Model):
         ('PR', 'PROFESSIONAL'),
     ]
     user_category = models.CharField(max_length=1, choices=USER_CATEGORIES, default='ST')
-    username = models.CharField(max_length=100, unique=True)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=100)
 
